@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RAHA - Wear the Change</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: #F7F2E9;
+    color: #2A2A2A;
+    line-height: 1.6;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav h1 {
+    color: #2E6B4D;
+    font-size: 24px;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #2A2A2A;
+}
+
+/* HERO */
+.hero {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+                url('assets/hero.jpg') center/cover;
+    color: white;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 700px;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: #2E6B4D;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* SECTIONS */
+section {
+    padding: 80px 60px;
+}
+
+.section-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #2E6B4D;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* CARDS */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* PRODUCTS */
+.product {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.product h3 {
+    margin-bottom: 10px;
+}
+
+/* TIMELINE */
+.timeline {
+    border-left: 3px solid #2E6B4D;
+    padding-left: 20px;
+}
+
+.timeline div {
+    margin-bottom: 20px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 40px;
+    background: #2E6B4D;
+    color: white;
+}
+
+/* ANIMATION */
+.fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.6s ease;
+}
+
+.fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h1>RAHA</h1>
+    <div>
+        <a href="#problem">Problem</a>
+        <a href="#solution">Solution</a>
+        <a href="#products">Products</a>
+        <a href="#impact">Impact</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <h2>Wear the Change. Wrap the Future.</h2>
+    <p>Turning textile waste into life-saving emergency preparedness solutions for families, schools, and communities.</p>
+    <button class="btn" onclick="scrollToSection('problem')">Explore</button>
+</div>
+
+<section id="problem" class="fade">
+    <h2 class="section-title">The Problem</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Textile Waste</h3>
+            <p>UAE generates massive textile waste every year ending up in landfills.</p>
+        </div>
+        <div class="card">
+            <h3>Emergency Gaps</h3>
+            <p>Families lack affordable and accessible emergency preparedness tools.</p>
+        </div>
+    </div>
+</section>
+
+<section id="solution" class="fade">
+    <h2 class="section-title">Our Solution</h2>
+    <div class="card">
+        <p>RAHA transforms discarded textile waste into sterilized, reusable emergency materials such as slings, cooling wraps, masks, and wound covers.</p>
+    </div>
+</section>
+
+<section id="products" class="fade">
+    <h2 class="section-title">Products</h2>
+    <div class="grid">
+        <div class="product">
+            <h3>Essentials Kit</h3>
+            <p>AED 15</p>
+        </div>
+        <div class="product">
+            <h3>Family Kit</h3>
+            <p>AED 49</p>
+        </div>
+        <div class="product">
+            <h3>Institution Pack</h3>
+            <p>AED 199</p>
+        </div>
+    </div>
+</section>
+
+<section id="impact" class="fade">
+    <h2 class="section-title">Impact</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>SDG 3</h3>
+            <p>Good Health & Well-being</p>
+        </div>
+        <div class="card">
+            <h3>SDG 11</h3>
+            <p>Sustainable Communities</p>
+        </div>
+        <div class="card">
+            <h3>SDG 13</h3>
+            <p>Climate Action</p>
+        </div>
+    </div>
+</section>
+
+<section class="fade">
+    <h2 class="section-title">How It Works</h2>
+    <div class="timeline">
+        <div>1. Collect textile waste</div>
+        <div>2. Sterilize & process materials</div>
+        <div>3. Convert into emergency kits</div>
+        <div>4. Distribute to families & institutions</div>
+    </div>
+</section>
+
+<footer>
+    <p>RAHA - Wear the Change. Wrap the Future.</p>
+</footer>
+
+<script>
+// Smooth scroll
+function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({behavior: 'smooth'});
+}
+
+// Scroll animation
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+    });
+});
+
+document.querySelectorAll('.fade').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
